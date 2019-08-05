@@ -1,8 +1,200 @@
- 
 <html>
 <header>
-  <title>Hello</title></header>
+    <meta charset="UTF-8">
+    <title>Congratulations</title>
+    <style>
+        body {
+            font-family: "Gill Sans", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* JUMP */
+        h1 {
+            cursor: default;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100px;
+            margin: auto;
+            display: block;
+            text-align: center;
+        }
+
+        h1 span {
+            position: relative;
+            top: 20px;
+            display: inline-block;
+            -webkit-animation: bounce 0.3s ease infinite alternate;
+            font-size: 6.5vw;
+            color: #fff;
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+            0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+            0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 span:nth-child(1) {
+            color: red;
+        }
+
+        h1 span:nth-child(2) {
+            color: orange;
+            -webkit-animation-delay: 0.1s;
+        }
+
+        h1 span:nth-child(3) {
+            color: yellow;
+            -webkit-animation-delay: 0.2s;
+        }
+
+        h1 span:nth-child(4) {
+            color: green;
+            -webkit-animation-delay: 0.3s;
+        }
+
+        h1 span:nth-child(5) {
+            color: #0099ff;
+            -webkit-animation-delay: 0.4s;
+        }
+
+        h1 span:nth-child(6) {
+            color: #3F00FF;
+            -webkit-animation-delay: 0.5s;
+        }
+
+        h1 span:nth-child(7) {
+            color: violet;
+            -webkit-animation-delay: 0.6s;
+        }
+
+        h1 span:nth-child(8) {
+            color: red;
+            -webkit-animation-delay: 0.2s;
+        }
+
+        h1 span:nth-child(9) {
+            color: orange;
+            -webkit-animation-delay: 0.3s;
+        }
+
+        h1 span:nth-child(10) {
+            color: yellow;
+            -webkit-animation-delay: 0.4s;
+        }
+
+        h1 span:nth-child(11) {
+            color: green;
+            -webkit-animation-delay: 0.5s;
+        }
+
+        h1 span:nth-child(12) {
+            color: #0099ff;
+            -webkit-animation-delay: 0.6s;
+        }
+
+        h1 span:nth-child(13) {
+            color: #3F00FF;
+            -webkit-animation-delay: 0.7s;
+        }
+
+        h1 span:nth-child(14) {
+            color: violet;
+            -webkit-animation-delay: 0.8s;
+        }
+
+        h1 span:nth-child(15) {
+            color: red;
+            -webkit-animation-delay: 0.9s;
+        }
+
+
+        /* Bounce animation found here: https://codepen.io/arlinadesign/pen/BxgRPb */
+        @-webkit-keyframes bounce {
+            100% {
+                top: -20px;
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+                0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+                0 50px 25px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .info{
+            margin: 300px auto 0;
+            max-width: 60%;
+        }
+
+        p {
+            font-size: 40px;
+
+        }
+
+
+    </style>
+</header>
 <body>
-  Hello world
+<h1>
+    <span>C</span>
+    <span>o</span>
+    <span>n</span>
+    <span>g</span>
+    <span>r</span>
+    <span>a</span>
+    <span>t</span>
+    <span>u</span>
+    <span>l</span>
+    <span>a</span>
+    <span>t</span>
+    <span>i</span>
+    <span>o</span>
+    <span>n</span>
+    <span>s</span>
+</h1>
+
+<div class="info">
+    <p>
+        You found the easteregg 🥚!
+    </p>
+    <p>
+        The first person to send an email to <a href="mailto:java@javazone.no">java@javazone.no</a> with the tittle: "🍳🥓💥" receives
+        a great prize!!!
+    </p>
+
+</div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@0.3.0/dist/confetti.browser.min.js"></script>
+<script type="application/javascript">
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var end = Date.now() + (1000 * 1000);
+
+        (function frame() {
+            confetti({
+                particleCount: 10,
+                angle: 60,
+                spread: 55,
+                origin: {
+                    x: 0
+                }
+            });
+            confetti({
+                particleCount: 10,
+                angle: 120,
+                spread: 55,
+                origin: {
+                    x: 1
+                }
+            });
+
+            setTimeout(function () {
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }, 200)
+
+        }());
+    });
+
+</script>
 </html>
